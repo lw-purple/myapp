@@ -4,15 +4,93 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>select</ion-title>
+<ion-header no-border>
+  <ion-navbar color="header" id="home_header">
+    <ion-buttons left>
+      <button ion-button icon-only>
+        <ion-icon name="qr-scanner" ></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-searchbar showCancelButton="false" cancelButtonText="cancel" debounce=250 placeholder="Search ">
+    </ion-searchbar>
+    <ion-buttons right>
+      <button ion-button icon-only>
+        <ion-icon  name="text"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
+<ion-content color="outer-content">
+  <ion-grid>
+    <ion-row style="background:transprant">
+      <ion-col width-20 text-center style="background:rgba(000,000,000,.8);color:#fff">
+        <ion-icon name="home"></ion-icon><br> asdf
+      </ion-col>
+      <ion-col width-20 text-center style="background:rgba(000,000,000,.8);color:#fff">
+        <ion-icon name="home"></ion-icon><br> asdf
+      </ion-col>
+      <ion-col width-20 text-center style="background:rgba(000,000,000,.8);color:#fff">
+        <ion-icon name="home"></ion-icon><br> asdf
+      </ion-col>
+      <ion-col width-20 text-center style="background:rgba(000,000,000,.8);color:#fff">
+        <ion-icon name="home"></ion-icon><br> asdf
+      </ion-col>
+      <ion-col width-20 text-center style="background:rgba(000,000,000,.8);color:#fff">
+        <ion-icon name="home"></ion-icon><br> asdf
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-slides #islide 
+              [effect]= "'slide|fade|cube|coverflow|flip'"
+              [pager]= "'true'" [autoplay]= "'000'"
+              [loop]= "'true'" [initialSlide]= "'0'"
+              [speed]= "'300'" [direction] = "'horizontal'"
+   >
+          
+    <ion-slide >
+      <h3>Slide1</h3>
+      <p>Detail</p>
+    </ion-slide>
+    <ion-slide>
+      <h3>Slide2</h3>
+      <p>Detail</p>
+    </ion-slide>
+    <ion-slide>
+      <h3>Slide3</h3>
+      <p>Detail</p>
+    </ion-slide>
+  </ion-slides>
+  <ion-grid no-padding style="margin:10px 0">
+   <ion-row style="background:white">
+     <ion-col col-2 >
+      <div style="height:30px;padding-top:7px;background:white;padding-left:10px;">2555</div>
+        
+     </ion-col>
+     <ion-col >
+         <ion-slides id="mySlider2" #mySlider2 autoplay="2000" direction="vertical" parallax="true"   loop="true" style="width:100%;height:30px;background:white;">
+          <ion-slide>
+            sdffffffffffffffffffffffff
+          </ion-slide>
+          <ion-slide>
+            fsdddddddddddddddd
+          </ion-slide>
+          <ion-slide>
+            fsdddddddddddddddddddddd
+          </ion-slide>
+          <ion-slide>
+            565656565656565656565656
+          </ion-slide>
+        </ion-slides>
+     </ion-col>
+   </ion-row>
+ </ion-grid>
+<div text-center padding>
+    <canvas id="myChart" ></canvas>
+  <button ion-button block>开始测试</button>
+</div>
+<div text-center padding>
+    <canvas id="myChart2" style="width:340px;height:170px;" ></canvas>
+</div>
 
-
-<ion-content padding>
-
+  
 </ion-content>

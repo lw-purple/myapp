@@ -1,3 +1,20 @@
 page-select {
-
+    .searchbar-md .searchbar-search-icon,
+    .searchbar-md .searchbar-md-cancel {
+        top: 7px;
+    }
+   .searchbar-md .searchbar-search-icon{
+       left:4px;
+   }
+   .searchbar-md .searchbar-input{
+       padding-left: 25px
+   }
+   ion-slides{
+       height: 200px;
+       border: 1px;
+      
+   }
+   #mySlider2  .slide-zoom{
+           text-align: left;
+       }
 }

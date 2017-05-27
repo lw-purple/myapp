@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { SelectPage } from './select';
-
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 @NgModule({
   declarations: [
     SelectPage,
@@ -11,6 +11,9 @@ import { SelectPage } from './select';
   ],
   exports: [
     SelectPage
+  ],
+  providers:[
+    BarcodeScanner
   ]
 })
 export class SelectPageModule {}
