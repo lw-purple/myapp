@@ -7,7 +7,7 @@
 <ion-header no-border>
   <ion-navbar color="header" id="home_header">
     <ion-buttons left>
-      <button ion-button icon-only>
+      <button ion-button icon-only (click)="onBarcodeScanner()">
         <ion-icon name="qr-scanner" ></ion-icon>
       </button>
     </ion-buttons>
@@ -84,6 +84,7 @@
      </ion-col>
    </ion-row>
  </ion-grid>
+<progress min="0" max="100" value="90" style="width:100%" ></progress>
 <div text-center padding>
     <canvas id="myChart" ></canvas>
   <button ion-button block>开始测试</button>
@@ -91,6 +92,7 @@
 <div text-center padding>
     <canvas id="myChart2" style="width:340px;height:170px;" ></canvas>
 </div>
+<three></three>
 
-  
+
 </ion-content>

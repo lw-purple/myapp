@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { NativeServiceProvider } from '../../providers/native-service/native-service';
+import {FileObj} from "../../model/FileObj";
 /**
  * Generated class for the CartPage page.
  *
@@ -13,12 +14,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'cart.html',
 })
 export class CartPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  fileObjList: FileObj[] = [];
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public NativeServiceProvider:NativeServiceProvider
+  ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CartPage');
   }
-
+  onClick(){
+    console.log(11)
+  //  this.NativeServiceProvider.toImagePicker();
+    
+  }
 }

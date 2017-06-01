@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
 import echarts from 'echarts';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+
 /**
  * Generated class for the SelectPage page.
  *
@@ -16,7 +17,11 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 export class SelectPage {
   public _data :number =60
   @ViewChild(Content) content: Content;
+
   constructor(public navCtrl: NavController, public navParams: NavParams,private barcodeScanner: BarcodeScanner) {
+    
+  }
+  onBarcodeScanner(){
     this.barcodeScanner.scan().then((barcodeData) => {
     // Success! Barcode data is here
     
@@ -25,7 +30,6 @@ export class SelectPage {
         // An error occurred
     });
   }
-
   onPageScroll(event) {
     let position = event.scrollTop;//取滑动TOP值 
     if (position <= 100) {
